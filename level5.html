@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Wafa Berri pds 3 and 4 Even-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic CSS</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+
+        p {
+            font: bold 16pt arial;
+        }
+
+
+        button {
+            background-color: red;
+            font: 14pt comic sans ms;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function getRandomNumber(lower, upper) {
+       
+            var multiplier = upper - (lower - 1); 
+            var rnd = parseInt(Math.random() * multiplier) + lower; 
+
+            return rnd; 
+}
+    </script>
+
+
+    <script>
+        function initialize() {
+            numberOutput = document.getElementById("numout");
+            rndNum = 0;
+
+
+            display();
+        }
+
+
+        function changeNumber() {
+            rndNum = getRandomNumber(1, 10);
+
+
+            display();
+        }
+
+
+        function display() {
+            numberOutput.innerHTML = rndNum;
+        }
+    </script>
+</head>
+<body onload = "initialize();">
+    <h1>This is my great page about external files</h1>
+    <p id="numout"></p>
+    <button onclick="changeNumber();">Change the number</button>
+</body>
+</html>
+
+
